@@ -31,10 +31,8 @@ export default function WordList() {
             }
           }
           hash[idx] = idx;
-          console.log(idx, res?.data[idx]);
           ret.push(res?.data[idx]);
         }
-        console.log(ret);
         setData(ret);
       });
   };
