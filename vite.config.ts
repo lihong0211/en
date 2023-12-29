@@ -46,13 +46,4 @@ export default defineConfig({
       '@chat': path.resolve(__dirname, './src'),
     },
   },
-  // css: {
-  //   preprocessorOptions: {
-
-  //     less: {
-  //       math: 'parens-division',
-  //     },
-
-  //   },
-  // },
 });
