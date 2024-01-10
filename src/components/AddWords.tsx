@@ -1,5 +1,4 @@
 import { Form, Input, Button, Card, message, Popconfirm, Select } from 'antd';
-import { CloseCircleOutlined } from '@ant-design/icons';
 import { css } from '@emotion/react';
 import { useState, useEffect } from 'react';
 import request from '../../src/request';
@@ -15,7 +14,7 @@ export default function AddWords(props: { form: any }) {
             value: item.word,
             key: `${item.id}/${item.meaning}`,
           };
-        }),
+        })
       );
     });
   };
@@ -23,7 +22,7 @@ export default function AddWords(props: { form: any }) {
     getWords();
   }, []);
 
-  const { setFieldValue, getFieldValue } = props.form;
+  const { setFieldValue } = props.form;
 
   return (
     <div
@@ -66,11 +65,11 @@ export default function AddWords(props: { form: any }) {
                         onChange={(row) => {
                           setFieldValue(
                             ['words', item.name, 'meaning'],
-                            row.key.split('/')[1],
+                            row.key.split('/')[1]
                           );
                           setFieldValue(
                             ['words', item.name, 'word'],
-                            row.value,
+                            row.value
                           );
                         }}
                         onKeyDown={(e) => {
@@ -80,12 +79,12 @@ export default function AddWords(props: { form: any }) {
                             setFieldValue(
                               ['words', item.name, 'word'],
                               // @ts-ignore
-                              e.target.value,
+                              e.target.value
                             );
                             setFieldValue(
                               ['words', item.name, 'meaning'],
                               // @ts-ignore
-                              '',
+                              ''
                             );
                           }
                         }}
@@ -95,7 +94,7 @@ export default function AddWords(props: { form: any }) {
                             setFieldValue(
                               ['words', item.name, 'word'],
                               // @ts-ignore
-                              e.target.value,
+                              e.target.value
                             );
                         }}
                       />
