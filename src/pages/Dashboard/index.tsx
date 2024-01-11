@@ -6,6 +6,7 @@ import Affix from './Affix';
 import Dialogue from './Dialogue';
 import LivingSpeech from './LivingSpeech';
 import Test from './Test';
+import Footer from '../../components/Footer';
 
 export default function Dashboard() {
   const items = [
@@ -43,8 +44,11 @@ export default function Dashboard() {
   ];
 
   return (
-    <Card bordered style={{ height: '100vh' }}>
-      <Tabs items={items} defaultActiveKey={'1'} />
-    </Card>
+    <>
+      <Card bordered style={{ height: '100vh' }}>
+        <Tabs items={items} defaultActiveKey={'1'} />
+      </Card>
+      <Footer></Footer>
+    </>
   );
 }
