@@ -42,7 +42,7 @@ export default function Root() {
     >
       <ProTable<ItemType>
         rowKey="id"
-        scroll={{ x: 1500, y: 600 }}
+        scroll={{ x: 1500, y: 660 }}
         search={false}
         columns={[
           {

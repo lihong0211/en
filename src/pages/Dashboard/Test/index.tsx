@@ -21,17 +21,10 @@ export default function WordList() {
       })
       .then((res: any) => {
         const ret = [];
-        let hash: { [index: number]: number } = {};
         for (let i = 0; i < Math.min(20, res?.data?.length); i++) {
           let idx = Math.floor(Math.random() * res?.data?.length);
-          if (hash[idx]) {
-            idx++;
-            while (hash[idx]) {
-              idx++;
-            }
-          }
-          hash[idx] = idx;
           ret.push(res?.data[idx]);
+          res?.data?.splice(idx, 1);
         }
         setData(ret);
       });
@@ -85,7 +78,7 @@ export default function WordList() {
   const Content = (
     <>
       <div
-        className="flex flex-wrap overflow-y-scroll"
+        className="flex flex-wrap overflow-y-scroll justify-center"
         style={{
           height: 'calc(100vh - 200px)',
         }}
@@ -94,7 +87,7 @@ export default function WordList() {
           return (
             item && (
               <Card
-                className="w-[400px] m-3 animate__animated animate__fadeIn h-[90px]"
+                className="w-[350px] m-3 animate__animated animate__fadeIn h-[90px]"
                 bodyStyle={{ padding: 10 }}
                 key={index}
               >
@@ -182,15 +175,17 @@ export default function WordList() {
           );
         })}
       </div>
-      <Button
-        className="mt-2 ml-2"
-        type="primary"
-        onClick={() => {
-          getList(tabIndex);
-        }}
-      >
-        换一批
-      </Button>
+      <div className="w-full flex justify-center">
+        <Button
+          className="mt-2 ml-2"
+          type="primary"
+          onClick={() => {
+            getList(tabIndex);
+          }}
+        >
+          换一批
+        </Button>
+      </div>
     </>
   );
   return (

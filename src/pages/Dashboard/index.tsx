@@ -45,9 +45,16 @@ export default function Dashboard() {
 
   return (
     <>
-      <Card bordered style={{ height: '100vh' }}>
-        <Tabs items={items} defaultActiveKey={'1'} />
-      </Card>
+      {/* <Card bordered style={{ height: '100vh' }}> */}
+      <Tabs
+        items={items}
+        defaultActiveKey={'1'}
+        className="pt-[5px] px-[20px]"
+        style={{
+          height: '100vh',
+        }}
+      />
+      {/* </Card> */}
       <Footer></Footer>
     </>
   );

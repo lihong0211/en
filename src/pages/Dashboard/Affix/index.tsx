@@ -42,7 +42,7 @@ export default function Root() {
     >
       <ProTable<ItemType>
         rowKey="id"
-        scroll={{ x: 1500, y: 700 }}
+        scroll={{ x: 1500, y: 660 }}
         search={false}
         columns={[
           {
@@ -149,7 +149,7 @@ export default function Root() {
                 value: item.name,
                 key: item.id,
               };
-            }),
+            })
           );
           return {
             success: true,
