@@ -1,4 +1,4 @@
-import { Tabs, Card } from 'antd';
+import { Tabs } from 'antd';
 
 import Words from './Words';
 import Root from './Root';
@@ -6,9 +6,8 @@ import Affix from './Affix';
 import Dialogue from './Dialogue';
 import LivingSpeech from './LivingSpeech';
 import Test from './Test';
-import Footer from '../../components/Footer';
 
-export default function Dashboard() {
+export default function English() {
   const items = [
     {
       label: '单词',
@@ -45,17 +44,14 @@ export default function Dashboard() {
 
   return (
     <>
-      {/* <Card bordered style={{ height: '100vh' }}> */}
       <Tabs
         items={items}
         defaultActiveKey={'1'}
-        className="pt-[5px] px-[20px]"
+        // className="pt-[5px] px-[20px]"
         style={{
-          height: '100vh',
+          height: 'calc(100vh - 180px)',
         }}
       />
-      {/* </Card> */}
-      <Footer></Footer>
     </>
   );
 }

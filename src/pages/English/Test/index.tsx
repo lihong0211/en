@@ -1,5 +1,3 @@
-import { PageContainer } from '@ant-design/pro-components';
-import { FormOutlined } from '@ant-design/icons';
 import { css } from '@emotion/react';
 import { useEffect, useState } from 'react';
 import { Card, Checkbox, Input, Tabs, message, Button } from 'antd';
@@ -189,44 +187,28 @@ export default function WordList() {
     </>
   );
   return (
-    <PageContainer
-      css={css`
-        .ant-pro-page-container-children-container {
-          padding: 0;
-        }
-        .ant-form-horizontal {
-          padding: 0;
-          padding-top: 10px;
-        }
-        .ant-tabs {
-          height: 100vh;
-        }
-      `}
-      style={{ padding: 0 }}
-    >
-      <Tabs
-        tabPosition="left"
-        type="card"
-        centered
-        animated
-        items={[
-          {
-            label: '已掌握',
-            key: '1',
-            children: Content,
-          },
-          {
-            label: '未掌握',
-            key: '2',
-            children: Content,
-          },
-        ]}
-        defaultActiveKey="1"
-        onChange={(tabIndex) => {
-          getList(tabIndex);
-          setTabIndex(tabIndex);
-        }}
-      />
-    </PageContainer>
+    <Tabs
+      tabPosition="left"
+      type="card"
+      centered
+      animated
+      items={[
+        {
+          label: '已掌握',
+          key: '1',
+          children: Content,
+        },
+        {
+          label: '未掌握',
+          key: '2',
+          children: Content,
+        },
+      ]}
+      defaultActiveKey="1"
+      onChange={(tabIndex) => {
+        getList(tabIndex);
+        setTabIndex(tabIndex);
+      }}
+    />
   );
 }

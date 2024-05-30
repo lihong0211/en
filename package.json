@@ -1,5 +1,5 @@
 {
-  "name": "medgpt-chat",
+  "name": "doctor-dog",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "@ant-design/icons": "^5.1.4",
-    "@ant-design/pro-components": "^2.6.8",
+    "@ant-design/pro-components": "^2.6.49",
     "@types/lodash.debounce": "^4.0.7",
     "@types/qs": "^6.9.7",
     "ahooks": "^3.7.8",
