@@ -1,7 +1,7 @@
 import { Tabs } from 'antd';
 
 import BinarySearch from './binary_search.svg';
-import Dp from './Dp.svg';
+import Dp from './dp.svg';
 import HeapStackQueue from './heap_stack_queue.svg';
 import LinkedList from './linked_list.svg';
 import Tree from './tree.svg';
