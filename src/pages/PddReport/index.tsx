@@ -2,6 +2,7 @@ import { Tabs } from 'antd';
 
 import Chat from './Chat';
 import MakeRp from './MakeRp';
+import JdVersion from './JdVersion';
 
 export default function English() {
   const items = [
@@ -14,6 +15,11 @@ export default function English() {
       label: '开方',
       key: '2',
       children: <MakeRp />,
+    },
+    {
+      label: '京东版本号',
+      key: '3',
+      children: <JdVersion />,
     },
   ];
 
