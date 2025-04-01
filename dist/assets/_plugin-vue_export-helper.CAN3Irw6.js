@@ -1,1 +1,0 @@
-async function t({url:t,method:n="POST",data:r}){return uni.request({url:"https://www.wisevard.cn/"+t,method:n,data:r}).then((t=>{var n;return null==(n=null==t?void 0:t.data)?void 0:n.data}))}const n=(t,n)=>{const r=t.__vccOpts||t;for(const[a,o]of n)r[a]=o;return r};export{n as _,t as r};
